@@ -1,6 +1,8 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:moviebookingapp/pages/booking.dart';
 import 'package:moviebookingapp/pages/home.dart';
+import 'package:moviebookingapp/pages/profile.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
@@ -13,33 +15,34 @@ class _BottomNavState extends State<BottomNav> {
   late List<Widget> pages;
 
   late Home HomePage;
-  //late Booking booking;
-  //late Profile profile;
+  late Booking booking;
+  late Profile profile;
 
   int currentTabIndex = 0;
 
   @override
   void initState() {
-    HomePage = Home();
-    //   booking = Booking();
-    //   profile = Profile();
+    HomePage = const Home();
+    booking = const Booking();
+    profile = const Profile();
 
-    pages = [HomePage];
+    pages = [HomePage, booking, profile]; // Agrega todas las pantallas
     super.initState();
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.black,
-        color: Color.fromARGB(255, 204, 151, 7),
-        animationDuration: Duration(milliseconds: 500),
+        color: const Color.fromARGB(255, 204, 151, 7),
+        animationDuration: const Duration(milliseconds: 500),
         onTap: (int index) {
           setState(() {
             currentTabIndex = index;
           });
         },
-        items: [
+        items: const [
           Icon(
             Icons.home,
             color: Colors.white,

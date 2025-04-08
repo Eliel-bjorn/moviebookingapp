@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color.fromARGB(255, 0, 0, 0),
       body: Container(
         margin: const EdgeInsets.only(top: 40.0, left: 20.0),
         child: Column(
@@ -37,7 +37,7 @@ class _HomeState extends State<Home> {
                   fit: BoxFit.cover,
                 ),
                 const Text(
-                  "hello",
+                  "Hello ",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,
@@ -64,8 +64,8 @@ class _HomeState extends State<Home> {
             const Text(
               "Bienvenido a ",
               style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 22.0,
+                  color: Color.fromARGB(255, 120, 116, 116),
+                  fontSize: 20.0,
                   fontWeight: FontWeight.bold),
             ),
             const Row(children: [
@@ -73,14 +73,14 @@ class _HomeState extends State<Home> {
                 "Filmy",
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 25.0,
+                    fontSize: 30.0,
                     fontWeight: FontWeight.w500),
               ),
               Text(
                 "Fun",
                 style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25.0,
+                    color: Color.fromARGB(255, 204, 151, 7),
+                    fontSize: 30.0,
                     fontWeight: FontWeight.w500),
               ),
             ]),
@@ -141,7 +141,7 @@ class _HomeState extends State<Home> {
                           child: Image.asset(
                             "images/infinity.jpg",
                             height: 220,
-                            width: 150,
+                            width: 180,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -149,7 +149,7 @@ class _HomeState extends State<Home> {
                           padding: const EdgeInsets.only(left: 20.0),
                           margin: const EdgeInsets.only(top: 220),
                           height: 220,
-                          width: 150,
+                          width: 180,
                           decoration: const BoxDecoration(
                               color: Colors.black,
                               borderRadius: BorderRadius.only(
@@ -220,6 +220,59 @@ class _HomeState extends State<Home> {
                               ),
                               Text(
                                 "Accion, Aventura",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 15.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                          color: Colors.white,
+                        ),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.asset(
+                            "images/trr.jpg",
+                            height: 280,
+                            width: 150,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.only(left: 20.0),
+                          margin: const EdgeInsets.only(top: 220),
+                          height: 100,
+                          width: 150,
+                          decoration: const BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.only(
+                                  bottomLeft: Radius.circular(20),
+                                  bottomRight: Radius.circular(20))),
+                          child: const Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Gran Turismo",
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                              Text(
+                                "Accion, Suspenso",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 15.0,

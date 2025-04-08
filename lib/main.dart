@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moviebookingapp/pages/bottomnav.dart';
 import 'package:moviebookingapp/pages/home.dart'; // Asegúrate de que esta ruta sea correcta
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Home(), // Cambia esto para usar tu Home
+      home:
+          const BottomNav(), // En lugar de Home() // Cambia esto para usar tu Home
     );
   }
 }
