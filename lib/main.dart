@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:moviebookingapp/pages/bottomnav.dart';
+import 'package:moviebookingapp/pages/detail_page.dart';
 import 'package:moviebookingapp/pages/home.dart'; // Asegúrate de que esta ruta sea correcta
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home:
-          const BottomNav(), // En lugar de Home() // Cambia esto para usar tu Home
+          const DetailPage(), // En lugar de Home() // Cambia esto para usar tu Home
     );
   }
 }
